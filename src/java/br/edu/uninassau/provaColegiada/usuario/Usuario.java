@@ -1,16 +1,27 @@
 package br.edu.uninassau.provaColegiada.usuario;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * Esta classe representa um usuario salvo no banco de dados
  * 
  * @author avld
  */
-public class Usuario
+@Entity
+@Table( name = "usuarios", schema = "prova_colegiada" )
+public class Usuario implements Serializable
 {
     public final static int CATEGORIA_ADMIN     = 0;
     public final static int CATEGORIA_PROFESSOR = 1;
-    
+
+    @Id
+    @GeneratedValue
     private int id;
+    
     private String nome;
     private String login;
     private String senha;
