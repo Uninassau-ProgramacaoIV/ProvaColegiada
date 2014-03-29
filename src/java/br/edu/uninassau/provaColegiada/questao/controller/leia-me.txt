@@ -1,0 +1,24 @@
+Eu quero:
+- A arquitetura é em MVC (DAO + Servlet + JSP) e cada equipe ficou com um 
+  módulo para implementar
+
+- Cada módulo deve ter as seguintes ações: adicionar, modificar, excluir, 
+  visualizar (get) e listar
+
+- Vocês devem criar 5 classes, onde cada uma está relacionada com um ação
+
+- As classes devem usar o seguinte padrão: 
+     ModuloAcaoController (por exemplo, CursoAdicionarController)
+
+- As URLs dos Servlets devem usar o seguinte padrão:
+     /modulo/acao (por exemplo, /curso/adicionar)
+
+- Usem anotações para configurar as Servlet 
+     (por exemplo, @WebServlet( "/curso/adicionar" ) )
+
+- Vejam, o DAO é criado dentro de um filtro, o qual salva dentro da requisição com o 
+  nome ModuloDAO (por exemplo, CursoDAO é a instancia do DAO do módulo Curso) e vocês 
+  devem pega-lo pelo metodo request.getAttribute ( "ModuloDAO" );
+     VEJAM COMO FOI IMPLEMENTANDO NO MODULO USUARIO!
+
+- Qualquer dúvida, olhem o modulo Usuario ou mandem um e-mail (avld@cin.ufpe.br)!

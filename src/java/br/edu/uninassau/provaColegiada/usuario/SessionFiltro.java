@@ -13,10 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- *
+ * TODO: isso daqui deve ser usado depois!
+ * 
  * @author avld
  */
-@WebFilter( "/*" )
+@WebFilter( "/session/*" )
 public class SessionFiltro implements Filter
 {
 

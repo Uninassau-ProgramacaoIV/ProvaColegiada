@@ -4,16 +4,16 @@
  * and open the template in the editor.
  */
 
-package br.edu.uninassau.provaColegiada.disciplina.dao;
+package br.edu.uninassau.provaColegiada.turma.dao;
 
 import br.edu.uninassau.provaColegiada.DAO;
-import br.edu.uninassau.provaColegiada.disciplina.Disciplina;
+import br.edu.uninassau.provaColegiada.turma.Turma;
 
 /**
  *
  * @author aluno
  */
-public interface DisciplinaDAO extends DAO<Disciplina>
+public interface TurmaDAO extends DAO<Turma>
 {
     // os metodos foram definidos dentro da classe DAO
 }
