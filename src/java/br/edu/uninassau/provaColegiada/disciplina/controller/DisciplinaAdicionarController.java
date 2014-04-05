@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author aluno
+ * @author Ramon Italo
  */
 @WebServlet( "/usuario/adicionar" )
 public class DisciplinaAdicionarController extends HttpServlet
