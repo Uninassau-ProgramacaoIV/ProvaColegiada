@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Ramon Italo
  */
-@WebServlet( "/usuario/adicionar" )
+@WebServlet( "/disciplina/adicionar" )
 public class DisciplinaAdicionarController extends HttpServlet
 {
     
