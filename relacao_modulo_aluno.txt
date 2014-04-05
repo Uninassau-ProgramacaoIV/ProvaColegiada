@@ -1,6 +1,5 @@
 - usuario
 Antonio Vicente
-Nicolas
 
 - disciplina
 Andre
@@ -36,3 +35,4 @@ Marcos
 Willi
 Willian
 João Marcos
+Nicolas
