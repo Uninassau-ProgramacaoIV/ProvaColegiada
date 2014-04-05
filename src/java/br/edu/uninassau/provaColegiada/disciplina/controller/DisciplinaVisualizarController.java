@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author aluno
+ * @author valdemir
  */
 
 @WebServlet( "/Disciplina/visualizar")
