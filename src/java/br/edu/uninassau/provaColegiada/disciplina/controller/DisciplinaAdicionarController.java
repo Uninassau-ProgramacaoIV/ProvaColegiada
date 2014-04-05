@@ -63,7 +63,7 @@ public class DisciplinaAdicionarController extends HttpServlet
         }
     }
     
-    private Disciplina convertToUsuario( HttpServletRequest request )
+    private Disciplina convertToDisciplina( HttpServletRequest request )
     {
         String id    = request.getParameter( "id"  );   // recupera o campo 'id'
         String nome   = request.getParameter( "nome" );   // recupera o campo 'nome'
@@ -71,7 +71,7 @@ public class DisciplinaAdicionarController extends HttpServlet
         
         
         Disciplina disciplina = new Disciplina();
-        disciplina.setId( id );
+        disciplina.setId( Integer.parseInt(id) );
         disciplina.setNome( nome );
         
         
