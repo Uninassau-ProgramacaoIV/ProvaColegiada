@@ -8,7 +8,6 @@ package br.edu.uninassau.provaColegiada.curso.controller;
 
 import br.edu.uninassau.provaColegiada.curso.dao.CursoDAO;
 import br.edu.uninassau.provaColegiada.curso.Curso;
-import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
@@ -40,17 +39,16 @@ public class CursoListarController extends HttpServlet
                             throws ServletException, IOException
     {
         
-    }     
+       
             CursoDAO dao = (CursoDAO) request.getAttribute( "CursoDAO" ); // recupera o DAO
-            {
-}
+            
         if( request.getSession().getAttribute( "curso_msg" ) != null )
         {
             String msg = (String) request.getSession().getAttribute( "curso_msg" );
             request.getSession().removeAttribute( "curso_msg" );
             
             request.setAttribute( "msg" , msg );
-}
+        }
         
         try
         {
@@ -66,4 +64,7 @@ public class CursoListarController extends HttpServlet
             throw new ServletException( err );
         }
     }
+    
+    }
+   
 
