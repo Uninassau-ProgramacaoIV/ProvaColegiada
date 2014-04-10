@@ -67,5 +67,3 @@ public class CursoListarController extends HttpServlet
     
     }
    
-//aaaaaaaaaaaaaa
-////aa
