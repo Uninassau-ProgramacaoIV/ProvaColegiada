@@ -36,7 +36,9 @@ public class UsuarioExcluirController extends HttpServlet
         catch( Exception err )
         {
             request.getSession().setAttribute( "usuario_msg" , err.getMessage() );
-            response.sendRedirect( "/usuario/listar" );
+            response.sendRedirect( "/ProvaColegiada/usuario/listar" );
+            
+            return ;
         }
         
         try
@@ -44,7 +46,7 @@ public class UsuarioExcluirController extends HttpServlet
             dao.excluir( id );
             
             request.getSession().setAttribute( "usuario_msg" , "Usuário excluir com sucesso." );
-            response.sendRedirect( "/usuario/listar" );
+            response.sendRedirect( "/ProvaColegiada/usuario/listar" );
         }
         catch( Exception err )
         {

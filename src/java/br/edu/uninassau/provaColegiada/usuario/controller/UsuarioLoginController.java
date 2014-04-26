@@ -67,7 +67,7 @@ public class UsuarioLoginController extends HttpServlet
             if( usuario != null )
             {
                 request.getSession( true );
-                response.sendRedirect( "/index" );
+                response.sendRedirect( "/ProvaColegiada/index" );
             }
             else
             {

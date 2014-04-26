@@ -48,7 +48,7 @@ public class UsuarioAdicionarController extends HttpServlet
             dao.adicionar( usuario );
             request.getSession().setAttribute( "usuario_msg" 
                                              , "Usuario salvo com sucesso." );
-            response.sendRedirect( "/usuario/listar" );
+            response.sendRedirect( "/ProvaColegiada/usuario/listar" );
         }
         catch( Exception err )
         {

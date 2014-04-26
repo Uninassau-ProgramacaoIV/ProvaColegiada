@@ -30,7 +30,7 @@ public class UsuarioVisualizarController extends HttpServlet
     {
         UsuarioDAO dao = (UsuarioDAO) request.getAttribute( "UsuarioDAO" ); // recupera o DAO
         int id   = Integer.parseInt( request.getParameter( "id" ) );        // recupera o campo 'id'
-        
+        String context = (String) request.getAttribute( "servletContext" );
         
         try
         {
@@ -39,7 +39,9 @@ public class UsuarioVisualizarController extends HttpServlet
         catch( Exception err )
         {
             request.getSession().setAttribute( "usuario_msg" , err.getMessage() );
-            response.sendRedirect( "/usuario/listar" );
+            response.sendRedirect( context + "/usuario/listar" );
+            
+            return ;
         }
         
         try
@@ -63,7 +65,7 @@ public class UsuarioVisualizarController extends HttpServlet
         {
             throw new Exception( "É obrigatório o ID do usuario ser maior do que zero." );
         }
-        else if( dao.get( id ) != null )
+        else if( dao.get( id ) == null )
         {
             throw new Exception( "O usuário não existe." );
         }

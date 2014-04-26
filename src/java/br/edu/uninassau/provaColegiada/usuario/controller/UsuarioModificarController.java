@@ -28,9 +28,24 @@ public class UsuarioModificarController extends HttpServlet
                         , HttpServletResponse response )
                             throws ServletException, IOException
     {
-        // Exibi a pagina para login
-        RequestDispatcher rd = request.getRequestDispatcher( "/usuario/modificar.jsp" );
-        rd.forward( request , response );
+        try
+        {
+            String idStr = request.getParameter( "id" );
+            int id = Integer.parseInt( idStr );
+
+            UsuarioDAO dao = (UsuarioDAO) request.getAttribute( "UsuarioDAO" ); // recupera o DAO
+            Usuario usuario = dao.get( id );
+
+            request.setAttribute( "usuario" , usuario );
+            
+            // Exibi a pagina para login
+            RequestDispatcher rd = request.getRequestDispatcher( "/usuario/modificar.jsp" );
+            rd.forward( request , response );
+        }
+        catch( Exception err )
+        {
+            throw new ServletException( err );
+        }
     }
     
     @Override
@@ -48,7 +63,7 @@ public class UsuarioModificarController extends HttpServlet
             dao.modificar( usuario );
             request.getSession().setAttribute( "usuario_msg" 
                                              , "Usuario modificado com sucesso." );
-            response.sendRedirect( "/usuario/listar" );
+            response.sendRedirect( "/ProvaColegiada/usuario/listar" );
         }
         catch( Exception err )
         {

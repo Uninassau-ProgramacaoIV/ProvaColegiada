@@ -45,7 +45,7 @@ public class UsuarioFiltro implements Filter
                 usario.setSenha( "admin" );
                 usario.setCategoria( Usuario.CATEGORIA_ADMIN );
                 
-                dao.adicionar( null );
+                dao.adicionar( usario );
             }
         }
         catch( Exception err )

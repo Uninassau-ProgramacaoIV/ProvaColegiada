@@ -27,6 +27,7 @@ public class ArquivoUsuarioDAO implements UsuarioDAO
         
         try
         {
+            counter = 1;
             abrir();
         }
         catch( Exception err )
